@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\guhen\\Desktop\\dotnet\\aula_1\\aula_1.csproj": {}
+    "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\aula_1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\guhen\\Desktop\\dotnet\\aula_1\\aula_1.csproj": {
+    "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\aula_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guhen\\Desktop\\dotnet\\aula_1\\aula_1.csproj",
+        "projectUniqueName": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\aula_1.csproj",
         "projectName": "aula_1",
-        "projectPath": "C:\\Users\\guhen\\Desktop\\dotnet\\aula_1\\aula_1.csproj",
+        "projectPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\aula_1.csproj",
         "packagesPath": "C:\\Users\\guhen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guhen\\Desktop\\dotnet\\aula_1\\obj\\",
+        "outputPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\guhen\\AppData\\Roaming\\NuGet\\NuGet.Config"
