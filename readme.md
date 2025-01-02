@@ -37,5 +37,7 @@ Este repositório servirá como um guia inicial para estudos em C#, testes unit�
 - **src:** Código fonte dos projetos
 - **tests:** Projetos de testes unitários
 
+## Base para os Estudos
+
 Sendo realizado através do canal Rodrigo Sendin no Youtube.
 Link: https://www.youtube.com/watch?v=7h3aHGzZfRI&list=PLAcZIBgjW3CRtC57QNZHgeGkUCxuVnNyD
