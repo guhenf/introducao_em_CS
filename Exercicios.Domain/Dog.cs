@@ -59,7 +59,11 @@ public class Dog
 
      public void SetAge(int age)
     {
-        _age = age;
+        if (age < 0){
+            _age = 0;
+        } else {
+            _age = age;
+        }
     }
     public int GetAge()
     {
@@ -69,7 +73,11 @@ public class Dog
 
     public void SetWeight(double weight)
     {
-        _weight = weight;
+        if (weight < 0){
+            _weight = 0;
+        } else {
+            _weight = weight;
+        }
     }
     public double GetWeight()
     {

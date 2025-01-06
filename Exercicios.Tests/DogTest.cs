@@ -97,6 +97,15 @@ namespace Exercicios.Tests
         }
 
         [TestMethod]
+        public void DogSetAgeShouldRejectNegativeTest()
+        {
+            BanBan.SetAge(-6);
+            int age = BanBan.GetAge();
+            Console.WriteLine($"A idade nao pode ser menor do que 0.");
+            Assert.AreEqual(0, age);              
+        }
+
+        [TestMethod]
         public void DogSetGetWeightTest()
         {
             BanBan.SetWeight(10);
@@ -104,6 +113,16 @@ namespace Exercicios.Tests
 
             Console.WriteLine(weight);
             Assert.AreEqual(10, weight);
+        }
+
+        [TestMethod]
+        public void DogSetGetWeightShouldRejectedNegativeTest()
+        {
+            BanBan.SetWeight(-10);
+            double weight = BanBan.GetWeight();
+
+            Console.WriteLine(weight);
+            Assert.AreEqual(0, weight);
         }
     }
 }
