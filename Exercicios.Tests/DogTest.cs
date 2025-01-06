@@ -3,9 +3,12 @@ using Exercicios.Domain;
 namespace Exercicios.Tests
 {
     [TestClass]
+
     public class DogTest
     {
-        [TestMethod]
+        Dog BanBan = new Dog();
+
+        [TestMethod] 
         public void DogBarkTest()
         {
             Dog Fred = new Dog();
@@ -15,6 +18,7 @@ namespace Exercicios.Tests
 
             Assert.AreEqual("Woof Woof!", bark);
         }
+
         [TestMethod]
         public void HowMuchShouldDogEatTest_1()
         {
@@ -23,6 +27,7 @@ namespace Exercicios.Tests
             Console.WriteLine(howMuchShouldDogEat);
             Assert.AreEqual("Como o cão tem 1kg, ele deve comer 50g por dia", howMuchShouldDogEat); 
         }
+
         [TestMethod]
         public void HowMuchShouldDogEatTest_2()
         {
@@ -31,6 +36,7 @@ namespace Exercicios.Tests
             Console.WriteLine(howMuchShouldDogEat);
             Assert.AreEqual("Como o cão tem 15kg, ele deve comer 750g por dia", howMuchShouldDogEat); 
         }
+
         [TestMethod]
         public void HowMuchShouldDogEatTest_3()
         {
@@ -38,6 +44,66 @@ namespace Exercicios.Tests
             string howMuchShouldDogEat = Max.HowMuchShouldDogEat(30);
             Console.WriteLine(howMuchShouldDogEat);
             Assert.AreEqual("Como o cão tem 30kg, ele deve comer 1500g por dia", howMuchShouldDogEat); 
+        }
+
+        [TestMethod]
+        public void DogSetGetNameTest()
+        {
+            BanBan.SetName("BanBan");
+            string name = BanBan.GetName();
+
+            Console.WriteLine(name);
+            Assert.AreEqual("BanBan", name);
+        }
+        
+        [TestMethod]
+        public void DogSetGetGenderTest()
+        {
+            BanBan.SetGender("Macho");
+            string gender = BanBan.GetGender();
+
+            Console.WriteLine(gender);
+            Assert.AreEqual("Macho", gender);
+        }
+
+        [TestMethod]
+        public void DogSetGetBreedTest()
+        {
+            BanBan.SetBreed("Basse");
+            string breed = BanBan.GetBreed();
+
+            Console.WriteLine(breed);
+            Assert.AreEqual("Basse", breed);
+        }
+
+        [TestMethod]
+        public void DogSetGetSizeTest()
+        {
+            BanBan.SetSize("Pequeno");
+            string size = BanBan.GetSize();
+
+            Console.WriteLine(size);
+            Assert.AreEqual("Pequeno", size);
+        }
+
+        [TestMethod]
+        public void DogSetGetAgeTest()
+        {
+            BanBan.SetAge(6);
+            int age = BanBan.GetAge();
+
+            Console.WriteLine(age);
+            Assert.AreEqual(6, age);
+        }
+
+        [TestMethod]
+        public void DogSetGetWeightTest()
+        {
+            BanBan.SetWeight(10);
+            double weight = BanBan.GetWeight();
+
+            Console.WriteLine(weight);
+            Assert.AreEqual(10, weight);
         }
     }
 }
