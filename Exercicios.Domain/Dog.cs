@@ -1,18 +1,14 @@
-﻿
-
-
-namespace Exercicios.Domain;
+﻿namespace Exercicios.Domain;
 
 public class Dog
 {
     public string DogBark(short barksQtd)
     {
-        string bark = "Woof! ";
-        string barks = "";
+        var barks = "";
 
-        for (short i = 0; i < barksQtd; i++)
+        for (var i = 0; i < barksQtd; i++)
         {
-            barks = barks + bark;
+            barks = barks + "Woof! ";
         }
         return barks.TrimEnd();
     }
@@ -29,41 +25,41 @@ public class Dog
     {
         _name = name;
     }
-    public string GetName()
+    public string? GetName()
     {
         return _name;
     }
-    private string _name;
+    private string? _name;
 
     public void SetGender(string gender)
     {
         _gender = gender;
     }
-    public string GetGender()
+    public string? GetGender()
     {
         return _gender;
     }
-    private string _gender;
+    private string? _gender;
 
     public void SetBreed(string breed)
     {
         _breed = breed;
     }
-    public string GetBreed()
+    public string? GetBreed()
     {
         return _breed;
     }
-    private string _breed;
+    private string? _breed;
 
     public void SetSize(string size)
     {
         _size = size;
     }
-    public string GetSize()
+    public string? GetSize()
     {
         return _size;
     }
-    private string _size;
+    private string? _size;
 
     public void SetAge(int age)
     {
