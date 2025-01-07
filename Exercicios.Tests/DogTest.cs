@@ -9,13 +9,23 @@ namespace Exercicios.Tests
         Dog BanBan = new Dog();
 
         [TestMethod]
-        public void DogBarkTest()
+        public void DogBarkTest_1()
         {
             Dog Fred = new Dog();
             string bark = Fred.DogBark(3);
 
             Console.WriteLine(bark);
             Assert.AreEqual("Woof! Woof! Woof!", bark);
+        }
+
+        [TestMethod]
+        public void DogBarkTest_2()
+        {
+            Dog Fred = new Dog();
+            string bark = Fred.DogBark(9);
+
+            Console.WriteLine(bark);
+            Assert.AreEqual("Woof! Woof! Woof! Woof! Woof! Woof! Woof! Woof! Woof!", bark);
         }
 
         [TestMethod]
