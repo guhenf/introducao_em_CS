@@ -124,5 +124,25 @@ namespace Exercicios.Tests
             Console.WriteLine(weight);
             Assert.AreEqual(0, weight);
         }
+
+        [TestMethod]
+        public void DogIsVaccinatedTest()
+        {
+            BanBan.setVaccinated(true);
+            bool dogIsVaccinated = BanBan.getVaccinated();
+
+            Console.WriteLine(dogIsVaccinated);
+            Assert.IsTrue(dogIsVaccinated);
+        }
+
+         [TestMethod]
+        public void DogIsNotVaccinatedTest()
+        {
+            BanBan.setVaccinated(false);
+            bool dogIsNotVaccinated = BanBan.getVaccinated();
+
+            Console.WriteLine(dogIsNotVaccinated);
+            Assert.IsFalse(dogIsNotVaccinated);
+        }
     }
 }

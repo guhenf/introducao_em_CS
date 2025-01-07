@@ -1,5 +1,6 @@
 ﻿
 
+
 namespace Exercicios.Domain;
 
 public class Dog
@@ -84,4 +85,14 @@ public class Dog
         return _weight;
     }
     private double _weight;
+
+    public void setVaccinated(bool vaccinated)
+    {
+        _vaccinated = vaccinated;
+    }
+    public bool getVaccinated()
+    {
+        return _vaccinated;
+    }
+    private bool _vaccinated;
 }
