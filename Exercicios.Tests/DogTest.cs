@@ -122,7 +122,7 @@ namespace Exercicios.Tests
         public void DogSetGetWeightTest()
         {
             BanBan.SetWeight(10);
-            double weight = BanBan.GetWeight();
+            double? weight = BanBan.GetWeight();
 
             Console.WriteLine(weight);
             Assert.AreEqual(10, weight);
@@ -132,10 +132,20 @@ namespace Exercicios.Tests
         public void DogSetGetWeightShouldRejectedNegativeTest()
         {
             BanBan.SetWeight(-10);
-            double weight = BanBan.GetWeight();
+            double? weight = BanBan.GetWeight();
 
             Console.WriteLine(weight);
-            Assert.AreEqual(0, weight);
+            Assert.AreEqual(null, weight);
+        }
+        [TestMethod]
+
+        public void DogSetGetWeightNullableTest()
+        {
+            BanBan.SetWeight(null);
+            double? weight = BanBan.GetWeight();
+
+            Console.WriteLine(weight);
+            Assert.AreEqual(null, weight);
         }
 
         [TestMethod]

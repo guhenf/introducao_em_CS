@@ -82,22 +82,22 @@ public class Dog
     }
     private int _age;
 
-    public void SetWeight(double weight)
+    public void SetWeight(double? weight)
     {
         if (weight < 0)
         {
-            _weight = 0;
+            _weight = null;
         }
         else
         {
             _weight = weight;
         }
     }
-    public double GetWeight()
+    public double? GetWeight()
     {
         return _weight;
     }
-    private double _weight;
+    private double? _weight;
 
     public void setVaccinated(bool vaccinated)
     {
