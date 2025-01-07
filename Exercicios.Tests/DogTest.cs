@@ -8,14 +8,14 @@ namespace Exercicios.Tests
     {
         Dog BanBan = new Dog();
 
-        [TestMethod] 
+        [TestMethod]
         public void DogBarkTest()
         {
             Dog Fred = new Dog();
-            string bark = Fred.DogBark();
+            string bark = Fred.DogBark(3);
 
             Console.WriteLine(bark);
-            Assert.AreEqual("Woof Woof!", bark);
+            Assert.AreEqual("Woof! Woof! Woof!", bark);
         }
 
         [TestMethod]
@@ -25,7 +25,7 @@ namespace Exercicios.Tests
             string howMuchShouldDogEat = Fred.HowMuchShouldDogEat(1);
 
             Console.WriteLine(howMuchShouldDogEat);
-            Assert.AreEqual("Como o cão tem 1kg, ele deve comer 50g por dia", howMuchShouldDogEat); 
+            Assert.AreEqual("Como o cão tem 1kg, ele deve comer 50g por dia", howMuchShouldDogEat);
         }
 
         [TestMethod]
@@ -35,7 +35,7 @@ namespace Exercicios.Tests
             string howMuchShouldDogEat = Marley.HowMuchShouldDogEat(15);
 
             Console.WriteLine(howMuchShouldDogEat);
-            Assert.AreEqual("Como o cão tem 15kg, ele deve comer 750g por dia", howMuchShouldDogEat); 
+            Assert.AreEqual("Como o cão tem 15kg, ele deve comer 750g por dia", howMuchShouldDogEat);
         }
 
         [TestMethod]
@@ -45,7 +45,7 @@ namespace Exercicios.Tests
             string howMuchShouldDogEat = Max.HowMuchShouldDogEat(30);
 
             Console.WriteLine(howMuchShouldDogEat);
-            Assert.AreEqual("Como o cão tem 30kg, ele deve comer 1500g por dia", howMuchShouldDogEat); 
+            Assert.AreEqual("Como o cão tem 30kg, ele deve comer 1500g por dia", howMuchShouldDogEat);
         }
 
         [TestMethod]
@@ -57,7 +57,7 @@ namespace Exercicios.Tests
             Console.WriteLine(name);
             Assert.AreEqual("BanBan", name);
         }
-        
+
         [TestMethod]
         public void DogSetGetGenderTest()
         {
@@ -103,9 +103,9 @@ namespace Exercicios.Tests
         {
             BanBan.SetAge(-6);
             int age = BanBan.GetAge();
-            
+
             Console.WriteLine($"A idade nao pode ser menor do que 0.");
-            Assert.AreEqual(0, age);              
+            Assert.AreEqual(0, age);
         }
 
         [TestMethod]
@@ -138,7 +138,7 @@ namespace Exercicios.Tests
             Assert.IsTrue(dogIsVaccinated);
         }
 
-         [TestMethod]
+        [TestMethod]
         public void DogIsNotVaccinatedTest()
         {
             BanBan.setVaccinated(false);

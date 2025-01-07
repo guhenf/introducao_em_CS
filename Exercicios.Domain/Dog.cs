@@ -5,9 +5,16 @@ namespace Exercicios.Domain;
 
 public class Dog
 {
-    public string DogBark()
+    public string DogBark(short barksQtd)
     {
-        return "Woof Woof!";
+        string bark = "Woof! ";
+        string barks = "";
+
+        for (short i = 0; i < barksQtd; i++)
+        {
+            barks = barks + bark;
+        }
+        return barks.TrimEnd();
     }
 
     public string HowMuchShouldDogEat(int weight)
