@@ -5,18 +5,18 @@ namespace Exercicios.Domain;
 
 public class Dog
 {
-   public string DogBark()
-   {
-      return "Woof Woof!"; 
-   }
+    public string DogBark()
+    {
+        return "Woof Woof!";
+    }
 
     public string HowMuchShouldDogEat(int weight)
-   {
-      //Metodo para calcular 5% do peso do Cachorro que deve ser q qtd para alimentacao diaria.
-      //Weight em Kg * 1000 = peso em gramas. FoodToDog em Gramas.
-      double foodToDog = weight * 1000 * 0.05;
-      return $"Como o cão tem {weight}kg, ele deve comer {foodToDog}g por dia";
-   }
+    {
+        //Metodo para calcular 5% do peso do Cachorro que deve ser q qtd para alimentacao diaria.
+        //Weight em Kg * 1000 = peso em gramas. FoodToDog em Gramas.
+        double foodToDog = weight * 1000 * 0.05;
+        return $"Como o cão tem {weight}kg, ele deve comer {foodToDog}g por dia";
+    }
 
     public void SetName(string name)
     {
@@ -58,11 +58,14 @@ public class Dog
     }
     private string _size;
 
-     public void SetAge(int age)
+    public void SetAge(int age)
     {
-        if (age < 0){
+        if (age < 0)
+        {
             _age = 0;
-        } else {
+        }
+        else
+        {
             _age = age;
         }
     }
@@ -74,9 +77,12 @@ public class Dog
 
     public void SetWeight(double weight)
     {
-        if (weight < 0){
+        if (weight < 0)
+        {
             _weight = 0;
-        } else {
+        }
+        else
+        {
             _weight = weight;
         }
     }

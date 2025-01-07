@@ -15,7 +15,6 @@ namespace Exercicios.Tests
             string bark = Fred.DogBark();
 
             Console.WriteLine(bark);
-
             Assert.AreEqual("Woof Woof!", bark);
         }
 
@@ -24,6 +23,7 @@ namespace Exercicios.Tests
         {
             Dog Fred = new Dog();
             string howMuchShouldDogEat = Fred.HowMuchShouldDogEat(1);
+
             Console.WriteLine(howMuchShouldDogEat);
             Assert.AreEqual("Como o cão tem 1kg, ele deve comer 50g por dia", howMuchShouldDogEat); 
         }
@@ -33,6 +33,7 @@ namespace Exercicios.Tests
         {
             Dog Marley = new Dog();
             string howMuchShouldDogEat = Marley.HowMuchShouldDogEat(15);
+
             Console.WriteLine(howMuchShouldDogEat);
             Assert.AreEqual("Como o cão tem 15kg, ele deve comer 750g por dia", howMuchShouldDogEat); 
         }
@@ -42,6 +43,7 @@ namespace Exercicios.Tests
         {
             Dog Max = new Dog();
             string howMuchShouldDogEat = Max.HowMuchShouldDogEat(30);
+
             Console.WriteLine(howMuchShouldDogEat);
             Assert.AreEqual("Como o cão tem 30kg, ele deve comer 1500g por dia", howMuchShouldDogEat); 
         }
@@ -101,6 +103,7 @@ namespace Exercicios.Tests
         {
             BanBan.SetAge(-6);
             int age = BanBan.GetAge();
+            
             Console.WriteLine($"A idade nao pode ser menor do que 0.");
             Assert.AreEqual(0, age);              
         }
