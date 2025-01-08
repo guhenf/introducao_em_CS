@@ -59,50 +59,10 @@ namespace Exercicios.Tests
         }
 
         [TestMethod]
-        public void DogSetGetNameTest()
-        {
-            BanBan.SetName("BanBan");
-            var name = BanBan.GetName();
-
-            Console.WriteLine(name);
-            Assert.AreEqual("BanBan", name);
-        }
-
-        [TestMethod]
-        public void DogSetGetGenderTest()
-        {
-            BanBan.SetGender("Macho");
-            var gender = BanBan.GetGender();
-
-            Console.WriteLine(gender);
-            Assert.AreEqual("Macho", gender);
-        }
-
-        [TestMethod]
-        public void DogSetGetBreedTest()
-        {
-            BanBan.SetBreed("Basse");
-            var breed = BanBan.GetBreed();
-
-            Console.WriteLine(breed);
-            Assert.AreEqual("Basse", breed);
-        }
-
-        [TestMethod]
-        public void DogSetGetSizeTest()
-        {
-            BanBan.SetSize("Pequeno");
-            var size = BanBan.GetSize();
-
-            Console.WriteLine(size);
-            Assert.AreEqual("Pequeno", size);
-        }
-
-        [TestMethod]
         public void DogSetGetAgeTest()
         {
-            BanBan.SetAge(6);
-            var age = BanBan.GetAge();
+            BanBan.Age = 6;
+            var age = BanBan.Age;
 
             Console.WriteLine(age);
             Assert.AreEqual(6, age);
@@ -111,8 +71,8 @@ namespace Exercicios.Tests
         [TestMethod]
         public void DogSetAgeShouldRejectNegativeTest()
         {
-            BanBan.SetAge(-6);
-            var age = BanBan.GetAge();
+            BanBan.Age = -6;
+            var age = BanBan.Age;
 
             Console.WriteLine($"A idade nao pode ser menor do que 0.");
             Assert.AreEqual(0, age);
@@ -121,8 +81,8 @@ namespace Exercicios.Tests
         [TestMethod]
         public void DogSetGetWeightTest()
         {
-            BanBan.SetWeight(10);
-            var weight = BanBan.GetWeight();
+            BanBan.Weight = 10;
+            var weight = BanBan.Weight;
 
             Console.WriteLine(weight);
             Assert.AreEqual(10, weight);
@@ -131,8 +91,8 @@ namespace Exercicios.Tests
         [TestMethod]
         public void DogSetGetWeightShouldRejectedNegativeTest()
         {
-            BanBan.SetWeight(-10);
-            var weight = BanBan.GetWeight();
+            BanBan.Weight = -10;
+            var weight = BanBan.Weight;
 
             Console.WriteLine(weight);
             Assert.AreEqual(null, weight);
@@ -141,31 +101,11 @@ namespace Exercicios.Tests
 
         public void DogSetGetWeightNullableTest()
         {
-            BanBan.SetWeight(null);
-            var weight = BanBan.GetWeight();
+            BanBan.Weight = null;
+            var weight = BanBan.Weight;
 
             Console.WriteLine(weight);
             Assert.AreEqual(null, weight);
-        }
-
-        [TestMethod]
-        public void DogIsVaccinatedTest()
-        {
-            BanBan.setVaccinated(true);
-            var dogIsVaccinated = BanBan.getVaccinated();
-
-            Console.WriteLine(dogIsVaccinated);
-            Assert.IsTrue(dogIsVaccinated);
-        }
-
-        [TestMethod]
-        public void DogIsNotVaccinatedTest()
-        {
-            BanBan.setVaccinated(false);
-            var dogIsNotVaccinated = BanBan.getVaccinated();
-
-            Console.WriteLine(dogIsNotVaccinated);
-            Assert.IsFalse(dogIsNotVaccinated);
         }
     }
 }

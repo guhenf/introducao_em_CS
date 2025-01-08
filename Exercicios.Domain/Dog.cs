@@ -21,87 +21,54 @@ public class Dog
         return $"Como o cão tem {weight}kg, ele deve comer {foodToDog}g por dia";
     }
 
-    public void SetName(string name)
-    {
-        _name = name;
-    }
-    public string? GetName()
-    {
-        return _name;
-    }
-    private string? _name;
+    public string? Name { get; set; }
 
-    public void SetGender(string gender)
-    {
-        _gender = gender;
-    }
-    public string? GetGender()
-    {
-        return _gender;
-    }
-    private string? _gender;
+    public string? Gender { get; set; }
 
-    public void SetBreed(string breed)
-    {
-        _breed = breed;
-    }
-    public string? GetBreed()
-    {
-        return _breed;
-    }
-    private string? _breed;
+    public string? Breed { get; set; }
 
-    public void SetSize(string size)
-    {
-        _size = size;
-    }
-    public string? GetSize()
-    {
-        return _size;
-    }
-    private string? _size;
+    public string? Size { get; set; }
 
-    public void SetAge(int age)
+    public bool Vaccinated { get; set; }
+
+
+    public int Age
     {
-        if (age < 0)
+        set
         {
-            _age = 0;
+            if (value < 0)
+            {
+                _age = 0;
+            }
+            else
+            {
+                _age = value;
+            }
         }
-        else
+        get
         {
-            _age = age;
+            return _age;
         }
-    }
-    public int GetAge()
-    {
-        return _age;
     }
     private int _age;
 
-    public void SetWeight(double? weight)
+    public double? Weight
     {
-        if (weight < 0)
+        set
         {
-            _weight = null;
+            if (value < 0)
+            {
+                _weight = null;
+            }
+            else
+            {
+                _weight = value;
+            }
         }
-        else
+        get
         {
-            _weight = weight;
+            return _weight;
         }
-    }
-    public double? GetWeight()
-    {
-        return _weight;
     }
     private double? _weight;
-
-    public void setVaccinated(bool vaccinated)
-    {
-        _vaccinated = vaccinated;
-    }
-    public bool getVaccinated()
-    {
-        return _vaccinated;
-    }
-    private bool _vaccinated;
 }
