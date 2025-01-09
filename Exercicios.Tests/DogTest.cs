@@ -59,23 +59,47 @@ namespace Exercicios.Tests
         }
 
         [TestMethod]
-        public void DogSetGetAgeTest()
+        public void DogGetYearsOldInMonthsTest()
         {
-            BanBan.Age = 6;
-            var age = BanBan.Age;
+            var Cj = new Dog();
+            Cj.DateOfBirth = DateTime.Today.AddMonths(-4);
+            var dogYersOld = Cj.DogYearsOldCalc(Cj.DateOfBirth);
 
-            Console.WriteLine(age);
-            Assert.AreEqual(6, age);
+            Console.WriteLine(dogYersOld);
+            Assert.AreEqual("4 Meses.", dogYersOld);
         }
 
         [TestMethod]
-        public void DogSetAgeShouldRejectNegativeTest()
+        public void DogGetYearsOldOneMonthTest()
         {
-            BanBan.Age = -6;
-            var age = BanBan.Age;
+            var Cj = new Dog();
+            Cj.DateOfBirth = DateTime.Today.AddMonths(-1);
+            var dogYersOld = Cj.DogYearsOldCalc(Cj.DateOfBirth);
 
-            Console.WriteLine($"A idade nao pode ser menor do que 0.");
-            Assert.AreEqual(0, age);
+            Console.WriteLine(dogYersOld);
+            Assert.AreEqual("1 Mes.", dogYersOld);
+        }
+
+        [TestMethod]
+        public void DogGetYearsOldInYearsTest()
+        {
+            var Frederico = new Dog();
+            Frederico.DateOfBirth = DateTime.Today.AddYears(-15);
+            var dogYersOld = Frederico.DogYearsOldCalc(Frederico.DateOfBirth);
+
+            Console.WriteLine(dogYersOld);
+            Assert.AreEqual("15 Anos.", dogYersOld);
+        }
+
+        [TestMethod]
+        public void DogGetYearsOldOneYearTest()
+        {
+            var Frederico = new Dog();
+            Frederico.DateOfBirth = DateTime.Today.AddYears(-1);
+            var dogYersOld = Frederico.DogYearsOldCalc(Frederico.DateOfBirth);
+
+            Console.WriteLine(dogYersOld);
+            Assert.AreEqual("1 Ano.", dogYersOld);
         }
 
         [TestMethod]

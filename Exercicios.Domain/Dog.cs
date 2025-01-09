@@ -1,4 +1,6 @@
-﻿namespace Exercicios.Domain;
+﻿using Microsoft.VisualBasic;
+
+namespace Exercicios.Domain;
 
 public class Dog
 {
@@ -31,26 +33,24 @@ public class Dog
 
     public bool Vaccinated { get; set; }
 
+    public DateTime DateOfBirth { get; set; }
 
-    public int Age
+    public string DogYearsOldCalc(DateTime dateOfBirth)
     {
-        set
+        var today = DateTime.Today;
+        int dogYears = today.Year - dateOfBirth.Year;
+        int dogMonths = today.Month - dateOfBirth.Month + (12 * dogYears);
+
+        if (dogMonths < 12)
         {
-            if (value < 0)
-            {
-                _age = 0;
-            }
-            else
-            {
-                _age = value;
-            }
+            return (dogMonths == 1) ? $"{dogMonths} Mes." : $"{dogMonths} Meses.";
         }
-        get
+        else
         {
-            return _age;
+            return (dogYears == 1) ? $"{dogYears} Ano." : $"{dogYears} Anos.";
         }
     }
-    private int _age;
+
 
     public double? Weight
     {
