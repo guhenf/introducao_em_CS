@@ -138,5 +138,94 @@ namespace Exercicios.Tests
             Assert.AreEqual(typeof(int), weight.GetType());
             Assert.AreEqual(typeof(Dog), Dog.GetType());
         }
+
+        [TestMethod]
+        public void DateTimeToday_Test()
+        {
+            var today = DateTime.Today;
+            Console.WriteLine(today);
+        }
+
+        [TestMethod]
+        public void DateTimeNow_Test()
+        {
+            var now = DateTime.Now;
+
+            Console.WriteLine(now);
+            Console.WriteLine(now.Year);
+            Console.WriteLine(now.Month);
+            Console.WriteLine(now.Day);
+            Console.WriteLine(now.Hour);
+            Console.WriteLine(now.Minute);
+            Console.WriteLine(now.Second);
+            Console.WriteLine(now.Millisecond);
+            Console.WriteLine(now.DayOfYear);
+        }
+
+        [TestMethod]
+        public void DateTimeAddTime()
+        {
+            var now = DateTime.Now;
+            var add5Hours = now.AddHours(5);
+            var tomorrow = now.AddDays(1);
+            var yesterday = now.AddDays(-1);
+            var nextMonth = now.AddMonths(1);
+
+            Console.WriteLine(add5Hours);
+            Console.WriteLine(tomorrow.DayOfWeek);
+            Console.WriteLine(yesterday.DayOfWeek);
+            Console.WriteLine(nextMonth.Month);
+        }
+
+        [TestMethod]
+        public void DateTimeInitialize_Test()
+        {
+            var my2025Birthday = new DateTime(2025, 09, 17);
+
+            Console.WriteLine(my2025Birthday);
+            Console.WriteLine(my2025Birthday.DayOfWeek);
+        }
+
+        [TestMethod]
+        public void DateTimeConvert_Test()
+        {
+            var date = DateTime.Parse("17/09/1998 04:00");
+            Console.WriteLine(date);
+            Console.WriteLine(date.DayOfWeek);
+        }
+
+        [TestMethod]
+        public void DaysOfMonth()
+        {
+            var daysInMonth = DateTime.DaysInMonth(2025, 2);
+            var lastDayInMonth = new DateTime(2025, 2, daysInMonth);
+
+            Console.WriteLine(daysInMonth);
+            Console.WriteLine(lastDayInMonth);
+
+        }
+
+        [TestMethod]
+        public void DateTimeFormat_Test()
+        {
+            var now = DateTime.Now;
+
+            Console.WriteLine(now);
+            Console.WriteLine(now.ToString("f"));
+            Console.WriteLine(now.ToString("dd/MM/yyyy"));
+            Console.WriteLine(now.ToString("dd/MM/yyyy HH:mm"));
+            Console.WriteLine(now.ToString("MMM/yyyy"));
+        }
+
+        [TestMethod]
+        public void TimeSpan_Test()
+        {
+            var myBirthday = new DateTime(1998, 09, 17);
+            var myWifeBirthday = new DateTime(2000, 02, 10); ;
+
+            var dif = myWifeBirthday.Subtract(myBirthday);
+
+            Console.WriteLine(dif.TotalDays);
+        }
     }
 }

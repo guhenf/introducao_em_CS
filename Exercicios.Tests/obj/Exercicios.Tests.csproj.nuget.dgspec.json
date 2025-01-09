@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Tests\\Exercicios.Tests.csproj": {}
+    "/Users/gustavo/Desktop/guhenf/introducao_em_CS/Exercicios.Tests/Exercicios.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Domain\\Exercicios.Domain.csproj": {
+    "/Users/gustavo/Desktop/guhenf/introducao_em_CS/Exercicios.Domain/Exercicios.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Domain\\Exercicios.Domain.csproj",
+        "projectUniqueName": "/Users/gustavo/Desktop/guhenf/introducao_em_CS/Exercicios.Domain/Exercicios.Domain.csproj",
         "projectName": "Exercicios.Domain",
-        "projectPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Domain\\Exercicios.Domain.csproj",
-        "packagesPath": "C:\\Users\\guhen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Domain\\obj\\",
+        "projectPath": "/Users/gustavo/Desktop/guhenf/introducao_em_CS/Exercicios.Domain/Exercicios.Domain.csproj",
+        "packagesPath": "/Users/gustavo/.nuget/packages/",
+        "outputPath": "/Users/gustavo/Desktop/guhenf/introducao_em_CS/Exercicios.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\guhen\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/gustavo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -59,21 +59,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Tests\\Exercicios.Tests.csproj": {
+    "/Users/gustavo/Desktop/guhenf/introducao_em_CS/Exercicios.Tests/Exercicios.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Tests\\Exercicios.Tests.csproj",
+        "projectUniqueName": "/Users/gustavo/Desktop/guhenf/introducao_em_CS/Exercicios.Tests/Exercicios.Tests.csproj",
         "projectName": "Exercicios.Tests",
-        "projectPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Tests\\Exercicios.Tests.csproj",
-        "packagesPath": "C:\\Users\\guhen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Tests\\obj\\",
+        "projectPath": "/Users/gustavo/Desktop/guhenf/introducao_em_CS/Exercicios.Tests/Exercicios.Tests.csproj",
+        "packagesPath": "/Users/gustavo/.nuget/packages/",
+        "outputPath": "/Users/gustavo/Desktop/guhenf/introducao_em_CS/Exercicios.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\guhen\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/gustavo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -85,8 +85,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Domain\\Exercicios.Domain.csproj": {
-                "projectPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Domain\\Exercicios.Domain.csproj"
+              "/Users/gustavo/Desktop/guhenf/introducao_em_CS/Exercicios.Domain/Exercicios.Domain.csproj": {
+                "projectPath": "/Users/gustavo/Desktop/guhenf/introducao_em_CS/Exercicios.Domain/Exercicios.Domain.csproj"
               }
             }
           }
@@ -132,7 +132,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
