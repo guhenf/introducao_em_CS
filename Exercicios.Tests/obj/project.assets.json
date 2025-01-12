@@ -1759,19 +1759,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/gustavo/.nuget/packages/": {}
+    "C:\\Users\\guhen\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gustavo/Desktop/guhenf/introducao_em_CS/Exercicios.Tests/Exercicios.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Tests\\Exercicios.Tests.csproj",
       "projectName": "Exercicios.Tests",
-      "projectPath": "/Users/gustavo/Desktop/guhenf/introducao_em_CS/Exercicios.Tests/Exercicios.Tests.csproj",
-      "packagesPath": "/Users/gustavo/.nuget/packages/",
-      "outputPath": "/Users/gustavo/Desktop/guhenf/introducao_em_CS/Exercicios.Tests/obj/",
+      "projectPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Tests\\Exercicios.Tests.csproj",
+      "packagesPath": "C:\\Users\\guhen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/gustavo/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\guhen\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -1783,8 +1783,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/gustavo/Desktop/guhenf/introducao_em_CS/Exercicios.Domain/Exercicios.Domain.csproj": {
-              "projectPath": "/Users/gustavo/Desktop/guhenf/introducao_em_CS/Exercicios.Domain/Exercicios.Domain.csproj"
+            "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Domain\\Exercicios.Domain.csproj": {
+              "projectPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Domain\\Exercicios.Domain.csproj"
             }
           }
         }
@@ -1830,7 +1830,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

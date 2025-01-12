@@ -9,6 +9,75 @@ namespace Exercicios.Tests
         Dog BanBan = new Dog();
 
         [TestMethod]
+        public void DogNameRequiredTest()
+        {
+            var Fred = new Dog
+            {
+                Name = "",
+                Gender = "Male",
+                DateOfBirth = new DateTime(2010, 03, 14),
+                Weight = 3
+            };
+
+            var message = Fred.ValidateInfosTryCatch();
+
+            Assert.AreEqual("Dog's name is required.", message[0]);
+            Console.WriteLine(message[0]);
+        }
+
+        [TestMethod]
+        public void DogGenderMostBeMaleOrFemaleTest()
+        {
+            var Fred = new Dog
+            {
+                Name = "Frederico",
+                Gender = "Alienigena",
+                DateOfBirth = new DateTime(2010, 03, 14),
+                Weight = 3
+            };
+
+            var message = Fred.ValidateInfosTryCatch();
+
+            Assert.AreEqual("Dog's gender is required, male or female.", message[0]);
+            Console.WriteLine(message[0]);
+        }
+
+        [TestMethod]
+        public void DogBirthDateCannotBeFutureDateTest()
+        {
+            var Fred = new Dog
+            {
+                Name = "Frederico",
+                Gender = "Male",
+                DateOfBirth = DateTime.Today.AddDays(1),
+                Weight = 3
+            };
+
+            var message = Fred.ValidateInfosTryCatch();
+
+            Assert.AreEqual("Dog's birth date cannot be in the future.", message[0]);
+            Console.WriteLine(message[0]);
+        }
+
+        [TestMethod]
+        public void DogWeigthMostBeGreaterThanZeroTest()
+        {
+            var Fred = new Dog
+            {
+                Name = "Frederico",
+                Gender = "Male",
+                DateOfBirth = new DateTime(2010, 03, 14),
+                Weight = 0
+            };
+
+
+            var message = Fred.ValidateInfosTryCatch();
+
+            Assert.AreEqual("Dog's weight must be greater than zero.", message[0]);
+            Console.WriteLine(message[0]);
+        }
+
+        [TestMethod]
         public void DogBarkTest_1()
         {
             var Fred = new Dog();

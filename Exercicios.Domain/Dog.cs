@@ -51,6 +51,57 @@ public class Dog
         }
     }
 
+    public List<string>? ValidateInfos()
+    {
+        var errorMessages = new List<string>();
+
+        if (string.IsNullOrWhiteSpace(Name))
+            errorMessages.Add("Dog's name is required.");
+
+        if (Gender != "Male" && Gender != "Female")
+            errorMessages.Add("Dog's gender is required, male ou female.");
+
+        if (DateOfBirth > DateTime.Today)
+            errorMessages.Add("Dog's birth date cannot be in the future.");
+
+        if (Weight <= 0)
+            errorMessages.Add("Dog's weight most be greater than zero.");
+
+        return errorMessages.Count == 0 ? null : errorMessages;
+    }
+
+    public List<string>? ValidateInfosTryCatch()
+    {
+        var errorMessages = new List<string>();
+
+        try
+        {
+            if (string.IsNullOrWhiteSpace(Name))
+            {
+                throw new ArgumentException("Dog's name is required.");
+            }
+
+            if (Gender != "Male" && Gender != "Female")
+            {
+                throw new ArgumentException("Dog's gender is required, male or female.");
+            }
+
+            if (DateOfBirth > DateTime.Today)
+            {
+                throw new ArgumentException("Dog's birth date cannot be in the future.");
+            }
+
+            if (Weight <= 0)
+            {
+                throw new ArgumentException("Dog's weight must be greater than zero.");
+            }
+        }
+        catch (ArgumentException ex)
+        {
+            errorMessages.Add(ex.Message);
+        }
+        return errorMessages.Count == 0 ? null : errorMessages;
+    }
 
     public double? Weight
     {

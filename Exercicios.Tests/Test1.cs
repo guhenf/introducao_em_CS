@@ -126,7 +126,7 @@ namespace Exercicios.Tests
         }
 
         [TestMethod]
-        public void Tipos_Implicitos_Test()
+        public void TiposImplicitosTest()
         {
             var name = "CJ";
             var age = 0.5;
@@ -189,7 +189,7 @@ namespace Exercicios.Tests
         [TestMethod]
         public void DateTimeConvert_Test()
         {
-            var date = DateTime.Parse("17/09/1998 04:00");
+            var date = DateTime.Parse("09/17/1998");
             Console.WriteLine(date);
             Console.WriteLine(date.DayOfWeek);
         }
@@ -226,6 +226,204 @@ namespace Exercicios.Tests
             var dif = myWifeBirthday.Subtract(myBirthday);
 
             Console.WriteLine(dif.TotalDays);
+        }
+
+        [TestMethod]
+        public void ArraysLoopWhileTest()
+        {
+            var array = new int[3];
+            array[0] = 10;
+            array[1] = 20;
+            array[2] = 30;
+
+            var index = 0;
+
+            while (index < array.Length)
+            {
+                Console.WriteLine(array[index]);
+                index++;
+            }
+        }
+
+        [TestMethod]
+        public void ArraysLoopDoWhileTest()
+        {
+            var array = new string[] { "Frederico", "Marley", "Max" };
+
+            var index = 0;
+            // var index = -1
+
+            do
+            {
+                Console.WriteLine(array[index]);
+                // Console.WriteLine(array[index++]);
+                // Console.WriteLine(array[++index]);
+                index++;
+            } while (index < array.Length);
+        }
+
+        [TestMethod]
+        public void ArraysLoopForTest()
+        {
+            var array = new string[] { "CJ", "Pipoca", "Pidjey" };
+
+            for (var i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+        }
+
+        [TestMethod]
+        public void ArraysInvertedLoopForTest()
+        {
+            var array = new[] { 5, 50, 501 };
+
+            for (int i = array.Length - 1; i >= 0; i--)
+            {
+                Console.WriteLine(array[i]);
+            }
+        }
+
+        [TestMethod]
+        public void ArraysForEachTest()
+        {
+            var collection = new[] { "Gustavo", "Henrique", "Franco" };
+
+            foreach (var item in collection)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        [TestMethod]
+        public void ListForEachTest()
+        {
+            var list = new List<string>() { "BMW" };
+            list.Remove("BMW");
+            list.Add("Toyota");
+            list.Add("Mazda");
+            list.Add("Honda");
+
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        [TestMethod]
+        public void DictionaryTest()
+        {
+            var dictionary = new Dictionary<int, string>();
+
+            dictionary.Add(1, "Audi");
+            dictionary.Add(2, "BMW");
+            dictionary.Add(3, "Alfa Romeo");
+            // dictionay.Remove(item.key)
+
+            foreach (var item in dictionary)
+            {
+                Console.WriteLine($"{item.Key}: {item.Value}");
+            }
+        }
+
+        [TestMethod]
+        public void ConditionIfElseTest()
+        {
+            var now = DateTime.Now;
+            var number = now.Second;
+            string message;
+
+            if (number % 2 == 0)
+            {
+                message = "is even.";
+            }
+            else
+            {
+                message = "is odd.";
+            }
+
+            Console.WriteLine($"{number} {message}");
+        }
+
+        [TestMethod]
+        public void ConditionIfElseTest_2()
+        {
+            var today = DateTime.Today;
+
+            string message;
+
+            if (today.DayOfWeek == DayOfWeek.Friday)
+                message = "Sextou padrinho.";
+            else if (today.DayOfWeek == DayOfWeek.Saturday)
+                message = "Sabadasso bom demais.";
+            else if (today.DayOfWeek == DayOfWeek.Sunday)
+                message = "Amanha tem trabalho...";
+            else
+                message = "Estou so pela sexta.";
+
+            Console.WriteLine(message);
+        }
+
+        [TestMethod]
+        public void ConditionTernaryTest()
+        {
+            var now = DateTime.Now;
+            var number = now.Second;
+
+            string message = number % 2 != 0 ? $"{number} is odd" : $"{number} is even";
+
+            Console.WriteLine(message);
+        }
+
+        [TestMethod]
+        public void ConditionSwitchCaseTest()
+        {
+            var today = DateTime.Today;
+
+            string message;
+
+            switch (today.DayOfWeek)
+            {
+                case DayOfWeek.Friday:
+                    message = "Sextou padrinho.";
+                    break;
+                case DayOfWeek.Saturday:
+                    message = "Sabadasso bom demais.";
+                    break;
+                case DayOfWeek.Sunday:
+                    message = "Amanha tem trabalho...";
+                    break;
+                default:
+                    message = "Estou so pela sexta.";
+                    break;
+            }
+
+            Console.WriteLine(message);
+        }
+
+        [TestMethod]
+        public void ExceptionTest()
+        {
+            var x = 10;
+            var y = 0;
+
+            try
+            {
+                var result = x / y;
+                Console.WriteLine(result);
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine($"We cannot divide {x} by zero.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                Console.WriteLine("Finally always runs here.");
+            }
         }
     }
 }
