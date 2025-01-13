@@ -25,11 +25,9 @@ public class Dog
 
     public string? Name { get; set; }
 
-    public string? Gender { get; set; }
+    public Gender Gender { get; set; }
 
-    public string? Breed { get; set; }
-
-    public string? Size { get; set; }
+    public Breed Breed { get; set; }
 
     public bool Vaccinated { get; set; }
 
@@ -59,8 +57,8 @@ public class Dog
         if (string.IsNullOrWhiteSpace(Name))
             errorMessages.Add("Dog's name is required.");
 
-        if (Gender != "Male" && Gender != "Female")
-            errorMessages.Add("Dog's gender is required, male ou female.");
+        // if (Gender != "Male" && Gender != "Female")
+        //     errorMessages.Add("Dog's gender is required, male ou female.");
 
         if (DateOfBirth > DateTime.Today)
             errorMessages.Add("Dog's birth date cannot be in the future.");
@@ -82,10 +80,10 @@ public class Dog
                 throw new ArgumentException("Dog's name is required.");
             }
 
-            if (Gender != "Male" && Gender != "Female")
-            {
-                throw new ArgumentException("Dog's gender is required, male or female.");
-            }
+            // if (Gender != "Male" && Gender != "Female")
+            // {
+            //     throw new ArgumentException("Dog's gender is required, male or female.");
+            // }
 
             if (DateOfBirth > DateTime.Today)
             {

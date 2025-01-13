@@ -14,7 +14,7 @@ namespace Exercicios.Tests
             var Fred = new Dog
             {
                 Name = "",
-                Gender = "Male",
+                Gender = Gender.Male,
                 DateOfBirth = new DateTime(2010, 03, 14),
                 Weight = 3
             };
@@ -25,22 +25,23 @@ namespace Exercicios.Tests
             Console.WriteLine(message[0]);
         }
 
-        [TestMethod]
-        public void DogGenderMostBeMaleOrFemaleTest()
-        {
-            var Fred = new Dog
-            {
-                Name = "Frederico",
-                Gender = "Alienigena",
-                DateOfBirth = new DateTime(2010, 03, 14),
-                Weight = 3
-            };
+        // Utilizando o Enum, definindo Gender como Male ou Female, descartamos este teste.
+        // [TestMethod]
+        // public void DogGenderMostBeMaleOrFemaleTest()
+        // {
+        //     var Fred = new Dog
+        //     {
+        //         Name = "Frederico",
+        //         Gender = "Alienigena",
+        //         DateOfBirth = new DateTime(2010, 03, 14),
+        //         Weight = 3
+        //     };
 
-            var message = Fred.ValidateInfosTryCatch();
+        //     var message = Fred.ValidateInfosTryCatch();
 
-            Assert.AreEqual("Dog's gender is required, male or female.", message[0]);
-            Console.WriteLine(message[0]);
-        }
+        //     Assert.AreEqual("Dog's gender is required, male or female.", message[0]);
+        //     Console.WriteLine(message[0]);
+        // }
 
         [TestMethod]
         public void DogBirthDateCannotBeFutureDateTest()
@@ -48,7 +49,7 @@ namespace Exercicios.Tests
             var Fred = new Dog
             {
                 Name = "Frederico",
-                Gender = "Male",
+                Gender = Gender.Male,
                 DateOfBirth = DateTime.Today.AddDays(1),
                 Weight = 3
             };
@@ -65,7 +66,7 @@ namespace Exercicios.Tests
             var Fred = new Dog
             {
                 Name = "Frederico",
-                Gender = "Male",
+                Gender = Gender.Male,
                 DateOfBirth = new DateTime(2010, 03, 14),
                 Weight = 0
             };
@@ -219,6 +220,35 @@ namespace Exercicios.Tests
 
             Console.WriteLine(BanBan.Owner.Name);
             Assert.AreEqual("Gustavo", BanBan.Owner.Name);
+        }
+
+        [TestMethod]
+        public void DogBreedWithSizeAssociationTest()
+        {
+            var Gustavo = new Owner
+            {
+                Name = "Gustavo",
+                Phone = "19 999796305",
+                Email = "guhenf@gmail.com"
+            };
+
+            var mutt = new Breed
+            {
+                Name = "Mutt",
+                Size = Size.Small,
+            };
+
+            var Cj = new Dog
+            {
+                Name = "CJ",
+                Owner = Gustavo,
+                Breed = mutt,
+            };
+
+            Console.WriteLine(Cj.Breed.Name);
+            Console.WriteLine(Cj.Breed.Size);
+            Assert.AreEqual("Mutt", Cj.Breed.Name);
+            Assert.AreEqual(Size.Small, Cj.Breed.Size);
         }
     }
 }
