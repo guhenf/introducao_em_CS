@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8S3KD3aGUn0=",
+  "dgSpecHash": "sUB5+xw4I7U=",
   "success": true,
-  "projectFilePath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Tests\\Exercicios.Tests.csproj",
+  "projectFilePath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Tests\\Exercicios.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\guhen\\.nuget\\packages\\microsoft.applicationinsights\\2.22.0\\microsoft.applicationinsights.2.22.0.nupkg.sha512",
     "C:\\Users\\guhen\\.nuget\\packages\\microsoft.codecoverage\\17.11.1\\microsoft.codecoverage.17.11.1.nupkg.sha512",

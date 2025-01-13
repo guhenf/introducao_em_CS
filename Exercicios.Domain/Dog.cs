@@ -34,6 +34,7 @@ public class Dog
     public bool Vaccinated { get; set; }
 
     public DateTime DateOfBirth { get; set; }
+    public Owner Owner { get; set; }
 
     public string DogYearsOldCalc(DateTime dateOfBirth)
     {

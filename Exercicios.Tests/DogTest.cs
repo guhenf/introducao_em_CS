@@ -200,5 +200,25 @@ namespace Exercicios.Tests
             Console.WriteLine(weight);
             Assert.AreEqual(null, weight);
         }
+
+        [TestMethod]
+        public void DogOwnerAssociationTest()
+        {
+            var Gustavo = new Owner
+            {
+                Name = "Gustavo",
+                Phone = "19 999796305",
+                Email = "guhenf@gmail.com"
+            };
+
+            var BanBan = new Dog
+            {
+                Name = "CJ",
+                Owner = Gustavo,
+            };
+
+            Console.WriteLine(BanBan.Owner.Name);
+            Assert.AreEqual("Gustavo", BanBan.Owner.Name);
+        }
     }
 }

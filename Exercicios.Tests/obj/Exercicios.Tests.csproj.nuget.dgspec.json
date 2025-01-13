@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Tests\\Exercicios.Tests.csproj": {}
+    "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Tests\\Exercicios.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Domain\\Exercicios.Domain.csproj": {
+    "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Domain\\Exercicios.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Domain\\Exercicios.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Domain\\Exercicios.Domain.csproj",
         "projectName": "Exercicios.Domain",
-        "projectPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Domain\\Exercicios.Domain.csproj",
+        "projectPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Domain\\Exercicios.Domain.csproj",
         "packagesPath": "C:\\Users\\guhen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Domain\\obj\\",
+        "outputPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\guhen\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Tests\\Exercicios.Tests.csproj": {
+    "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Tests\\Exercicios.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Tests\\Exercicios.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Tests\\Exercicios.Tests.csproj",
         "projectName": "Exercicios.Tests",
-        "projectPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Tests\\Exercicios.Tests.csproj",
+        "projectPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Tests\\Exercicios.Tests.csproj",
         "packagesPath": "C:\\Users\\guhen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Tests\\obj\\",
+        "outputPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\guhen\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -85,8 +85,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Domain\\Exercicios.Domain.csproj": {
-                "projectPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Domain\\Exercicios.Domain.csproj"
+              "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Domain\\Exercicios.Domain.csproj": {
+                "projectPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_CS\\Exercicios.Domain\\Exercicios.Domain.csproj"
               }
             }
           }
