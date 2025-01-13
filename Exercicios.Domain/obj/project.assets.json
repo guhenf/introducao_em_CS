@@ -8,25 +8,34 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\guhen\\.nuget\\packages\\": {}
+    "C:\\Users\\gusta\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Domain\\Exercicios.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\gusta\\Source\\Repos\\introducao_em_CS\\Exercicios.Domain\\Exercicios.Domain.csproj",
       "projectName": "Exercicios.Domain",
-      "projectPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Domain\\Exercicios.Domain.csproj",
-      "packagesPath": "C:\\Users\\guhen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\guhen\\Desktop\\dotnet\\introducao_em_cs\\Exercicios.Domain\\obj\\",
+      "projectPath": "C:\\Users\\gusta\\Source\\Repos\\introducao_em_CS\\Exercicios.Domain\\Exercicios.Domain.csproj",
+      "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gusta\\Source\\Repos\\introducao_em_CS\\Exercicios.Domain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\guhen\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\gusta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.telerik.com/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {

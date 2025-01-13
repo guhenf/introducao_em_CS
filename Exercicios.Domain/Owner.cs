@@ -14,7 +14,7 @@ namespace Exercicios.Domain
       public void AddPet(Dog pet)
       {
          if (Pets == null)
-            Pets = new List<Dog>();
+             Pets = new List<Dog>();
 
          Pets.Add(pet);
          pet.Owner = this;
@@ -22,8 +22,16 @@ namespace Exercicios.Domain
 
       public void AddPet(Dog[] pets)
       {
-         throw new NotImplementedException();
-      }
+            if (Pets == null)
+                Pets = new List<Dog>();
+
+            Pets.AddRange(pets);
+
+            foreach (var pet in pets)
+            {
+                pet.Owner = this;
+            }
+        }
 
       public void RemovePet(Dog pet)
       {
@@ -36,7 +44,14 @@ namespace Exercicios.Domain
 
       public void RemovePet(Dog[] pets)
       {
-         throw new NotImplementedException();
+         if (Pets == null)
+            return;
+
+            foreach (var pet in pets)
+            {
+                if (Pets.Remove(pet))
+                    pet.Owner = null;
+            }      
       }
    }
 }

@@ -189,7 +189,7 @@ namespace Exercicios.Tests
         [TestMethod]
         public void DateTimeConvert_Test()
         {
-            var date = DateTime.Parse("09/17/1998");
+            var date = DateTime.Parse("17/09/1998");
             Console.WriteLine(date);
             Console.WriteLine(date.DayOfWeek);
         }
