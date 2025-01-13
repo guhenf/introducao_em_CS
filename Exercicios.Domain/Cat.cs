@@ -1,26 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Exercicios.Tests;
 
 namespace Exercicios.Domain
 {
-    public class Cat : IPet
+    public class Cat : Animal, IPet
     {
-        public string Name { get; set; }
-        public Gender Gender { get; set; }
-        public string Photo { get; set; }
-        public Owner Owner { get; set; }
-
-        public string HowMuchHowMuchShouldDogEat(int weight)
+        public string CatMeow(int meowQtd)
         {
-            throw new NotImplementedException();
-        }
+            var meow = "";
 
-        public void ValidateInfosTryCatch()
-        {
-            throw new NotImplementedException();
+            for (var i = 0; i < meowQtd; i++)
+            {
+                meow = meow + "Meow! ";
+            }
+            return meow.TrimEnd();
         }
     }
 }

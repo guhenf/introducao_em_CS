@@ -7,7 +7,7 @@
         string Photo { get; set; }
         Owner Owner { get; set; }
 
-        string HowMuchHowMuchShouldDogEat(int weight);
-        void ValidateInfosTryCatch();
+        string HowMuchShouldPetEat(int weight);
+        List<string> ValidateInfosTryCatch();
     }
 }

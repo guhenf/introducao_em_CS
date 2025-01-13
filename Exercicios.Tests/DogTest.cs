@@ -21,7 +21,7 @@ namespace Exercicios.Tests
 
             var message = Fred.ValidateInfosTryCatch();
 
-            Assert.AreEqual("Dog's name is required.", message[0]);
+            Assert.AreEqual("Pet's name is required.", message[0]);
             Console.WriteLine(message[0]);
         }
 
@@ -71,7 +71,6 @@ namespace Exercicios.Tests
                 Weight = 0
             };
 
-
             var message = Fred.ValidateInfosTryCatch();
 
             Assert.AreEqual("Dog's weight must be greater than zero.", message[0]);
@@ -102,7 +101,7 @@ namespace Exercicios.Tests
         public void HowMuchShouldDogEatTest_1()
         {
             var Fred = new Dog();
-            var howMuchShouldDogEat = Fred.HowMuchShouldDogEat(1);
+            var howMuchShouldDogEat = Fred.HowMuchShouldPetEat(1);
 
             Console.WriteLine(howMuchShouldDogEat);
             Assert.AreEqual("Como o cão tem 1kg, ele deve comer 50g por dia", howMuchShouldDogEat);
@@ -112,7 +111,7 @@ namespace Exercicios.Tests
         public void HowMuchShouldDogEatTest_2()
         {
             var Marley = new Dog();
-            var howMuchShouldDogEat = Marley.HowMuchShouldDogEat(15);
+            var howMuchShouldDogEat = Marley.HowMuchShouldPetEat(15);
 
             Console.WriteLine(howMuchShouldDogEat);
             Assert.AreEqual("Como o cão tem 15kg, ele deve comer 750g por dia", howMuchShouldDogEat);
@@ -122,7 +121,7 @@ namespace Exercicios.Tests
         public void HowMuchShouldDogEatTest_3()
         {
             var Max = new Dog();
-            var howMuchShouldDogEat = Max.HowMuchShouldDogEat(30);
+            var howMuchShouldDogEat = Max.HowMuchShouldPetEat(30);
 
             Console.WriteLine(howMuchShouldDogEat);
             Assert.AreEqual("Como o cão tem 30kg, ele deve comer 1500g por dia", howMuchShouldDogEat);

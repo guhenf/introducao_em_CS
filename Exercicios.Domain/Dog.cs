@@ -1,10 +1,13 @@
-﻿using Microsoft.VisualBasic;
+﻿using Exercicios.Tests;
 
 namespace Exercicios.Domain;
 
-public class Dog : IPet
+public class Dog : Animal, IPet
 {
-    public string DogBark(short barksQtd)
+    public bool Vaccinated { get; set; }
+    public DateTime DateOfBirth { get; set; }
+
+    public string DogBark(int barksQtd)
     {
         var barks = "";
 
@@ -15,26 +18,13 @@ public class Dog : IPet
         return barks.TrimEnd();
     }
 
-    public string HowMuchShouldDogEat(int weight)
+    public override string HowMuchShouldPetEat(int weight)
     {
         //Metodo para calcular 5% do peso do Cachorro que deve ser q qtd para alimentacao diaria.
         //Weight em Kg * 1000 = peso em gramas. FoodToDog em Gramas.
         double foodToDog = weight * 1000 * 0.05;
         return $"Como o cão tem {weight}kg, ele deve comer {foodToDog}g por dia";
     }
-
-    public string? Name { get; set; }
-
-    public Gender Gender { get; set; }
-
-    public string Photo { get; set; }
-
-    public Breed Breed { get; set; }
-
-    public bool Vaccinated { get; set; }
-
-    public DateTime DateOfBirth { get; set; }
-    public Owner Owner { get; set; }
 
     public string DogYearsOldCalc(DateTime dateOfBirth)
     {
@@ -71,47 +61,25 @@ public class Dog : IPet
         return errorMessages.Count == 0 ? null : errorMessages;
     }
 
-    public List<string>? ValidateInfosTryCatch()
+    public override List<string>? ValidateInfosTryCatch()
     {
-        var errorMessages = new List<string>();
+        var errorMessages = CommonValidations();
 
-        try
-        {
-            if (string.IsNullOrWhiteSpace(Name))
-            {
-                throw new ArgumentException("Dog's name is required.");
-            }
+        // if (Gender != "Male" && Gender != "Female")
+        // {
+        //     throw new ArgumentException("Dog's gender is required, male or female.");
+        // }
 
-            // if (Gender != "Male" && Gender != "Female")
-            // {
-            //     throw new ArgumentException("Dog's gender is required, male or female.");
-            // }
+        if (errorMessages == null)
+            return null;
 
-            if (DateOfBirth > DateTime.Today)
-            {
-                throw new ArgumentException("Dog's birth date cannot be in the future.");
-            }
+        if (DateOfBirth > DateTime.Today)
+        errorMessages.Add("Dog's birth date cannot be in the future.");
+        
+        if (Weight <= 0)
+        errorMessages.Add("Dog's weight must be greater than zero.");
 
-            if (Weight <= 0)
-            {
-                throw new ArgumentException("Dog's weight must be greater than zero.");
-            }
-        }
-        catch (ArgumentException ex)
-        {
-            errorMessages.Add(ex.Message);
-        }
-        return errorMessages.Count == 0 ? null : errorMessages;
-    }
-
-    public string HowMuchHowMuchShouldDogEat(int weight)
-    {
-        throw new NotImplementedException();
-    }
-
-    void IPet.ValidateInfosTryCatch()
-    {
-        throw new NotImplementedException();
+        return errorMessages;
     }
 
     public double? Weight
