@@ -12,25 +12,26 @@ namespace Exercicios.Tests
          var Cj = new Dog { Name = "CJ" };
          var Marley = new Dog { Name = "Marley" };
          var Frederico = new Dog { Name = "Frederico" };
+         var Botas = new Cat { Name = "Botas" };
 
-         var Gustavo = new Owner { Name = "Gustavo" };
+            var Gustavo = new Owner { Name = "Gustavo" };
          var Silvana = new Owner { Name = "Silvana" };
 
-         Gustavo.Pets = new List<Dog>();
-         Silvana.Pets = new List<Dog>();
+         Gustavo.Pets = new List<IPet>();
+         Silvana.Pets = new List<IPet>();
 
-         Gustavo.Pets.Add(Cj);
-         Silvana.Pets.Add(Marley);
-         Marley.Owner = Silvana;
-         Silvana.Pets.Add(Frederico);
-         Frederico.Owner = Silvana;
+         Gustavo.AddPet(Cj);
+         Silvana.AddPet(Marley);
+         Silvana.AddPet(Frederico);
+         Silvana.AddPet(Botas);
 
-         Assert.AreEqual(2, Silvana.Pets.Count);
+         Assert.AreEqual(3, Silvana.Pets.Count);
          Assert.AreEqual(Silvana, Marley.Owner);
          Assert.AreEqual(Silvana, Frederico.Owner);
+         Assert.AreEqual(Silvana, Botas.Owner);
 
-         foreach (var pet in Silvana.Pets)
-            Console.WriteLine(pet.Name);
+            foreach (var pet in Silvana.Pets)
+            Console.WriteLine($"{pet.GetType().Name}: {pet.Name}");
       }
 
       [TestMethod]
@@ -78,14 +79,15 @@ namespace Exercicios.Tests
       {
          var Cj = new Dog { Name = "CJ" };
          var Max = new Dog { Name = "Max" };
+         var Botas = new Cat { Name = "Botas" };
 
          var Gustavo = new Owner { Name = "Gustavo" };
 
-         var Pets = new[] { Cj, Max };
+         var Pets = new IPet[] { Cj, Max, Botas };
 
          Gustavo.AddPet(Pets);
 
-         Gustavo.RemovePet(Max);
+         Gustavo.RemovePet(Max, Botas);
 
          Assert.AreEqual(1, Gustavo.Pets.Count);
          Assert.AreEqual(null, Max.Owner);
@@ -101,11 +103,12 @@ namespace Exercicios.Tests
          var Cj = new Dog { Name = "CJ" };
          var Max = new Dog { Name = "Max" };
          var Frederico = new Dog { Name = "Frederico" };
+         var Botas = new Cat { Name = "Botas" };
 
          var Gustavo = new Owner { Name = "Gustavo" };
 
-         var PetsToAdd = new[] { Cj, Max, Frederico };
-         var PetsToRemove = new[] { Max, Frederico };
+         var PetsToAdd = new IPet[] { Cj, Max, Frederico, Botas };
+         var PetsToRemove = new IPet[] { Max, Frederico, Botas };
 
          Gustavo.AddPet(PetsToAdd);
          Gustavo.RemovePet(PetsToRemove);

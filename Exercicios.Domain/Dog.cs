@@ -2,7 +2,7 @@
 
 namespace Exercicios.Domain;
 
-public class Dog
+public class Dog : IPet
 {
     public string DogBark(short barksQtd)
     {
@@ -26,6 +26,8 @@ public class Dog
     public string? Name { get; set; }
 
     public Gender Gender { get; set; }
+
+    public string Photo { get; set; }
 
     public Breed Breed { get; set; }
 
@@ -102,6 +104,16 @@ public class Dog
         return errorMessages.Count == 0 ? null : errorMessages;
     }
 
+    public string HowMuchHowMuchShouldDogEat(int weight)
+    {
+        throw new NotImplementedException();
+    }
+
+    void IPet.ValidateInfosTryCatch()
+    {
+        throw new NotImplementedException();
+    }
+
     public double? Weight
     {
         set
@@ -120,5 +132,6 @@ public class Dog
             return _weight;
         }
     }
+
     private double? _weight;
 }

@@ -250,5 +250,20 @@ namespace Exercicios.Tests
             Assert.AreEqual("Mutt", Cj.Breed.Name);
             Assert.AreEqual(Size.Small, Cj.Breed.Size);
         }
+
+        [TestMethod]
+        public void DogInterfaceTest()
+        {
+            IPet pet = new Dog { Name = "Cj", Weight = 2 };
+
+            Assert.AreEqual("Cj", pet.Name);
+            Console.WriteLine(pet.Name);
+
+            var Cj = pet as Dog;
+            // var Cj = (Dog)pet
+
+            Assert.AreEqual(2, Cj.Weight);
+            Console.WriteLine(Cj.Weight);
+        }
     }
 }

@@ -9,31 +9,24 @@ namespace Exercicios.Domain
       public string Phone { get; set; }
       public string Email { get; set; }
 
-      public List<Dog> Pets { get; set; }
+      public List<IPet> Pets { get; set; }
 
-      public void AddPet(Dog pet)
+      public void AddPet(IPet pet)
       {
          if (Pets == null)
-             Pets = new List<Dog>();
+             Pets = new List<IPet>();
 
          Pets.Add(pet);
          pet.Owner = this;
       }
 
-      public void AddPet(Dog[] pets)
+      public void AddPet(params IPet[] pets)
       {
-            if (Pets == null)
-                Pets = new List<Dog>();
-
-            Pets.AddRange(pets);
-
             foreach (var pet in pets)
-            {
-                pet.Owner = this;
-            }
+                AddPet(pet);   
         }
 
-      public void RemovePet(Dog pet)
+      public void RemovePet(IPet pet)
       {
          if (Pets == null)
             return;
@@ -42,16 +35,12 @@ namespace Exercicios.Domain
             pet.Owner = null;
       }
 
-      public void RemovePet(Dog[] pets)
+      public void RemovePet(params IPet[] pets)
       {
-         if (Pets == null)
-            return;
-
-            foreach (var pet in pets)
-            {
-                if (Pets.Remove(pet))
-                    pet.Owner = null;
-            }      
+         foreach (var pet in pets)
+         {
+                RemovePet(pet);
+         }      
       }
    }
 }
