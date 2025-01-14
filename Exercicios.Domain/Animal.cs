@@ -10,6 +10,19 @@ namespace Exercicios.Tests
         public Breed Breed { get; set; }
         public Owner Owner { get; set; }
 
+        public double Weight
+        {
+            set
+            {              
+                _weight = value;
+            }
+            get
+            {
+                return _weight;
+            }
+        }
+        private double _weight;
+
         public abstract string HowMuchShouldPetEat();
 
         protected List<string> CommonValidations()
@@ -39,17 +52,5 @@ namespace Exercicios.Tests
 
             return errorMessages;
         }
-        public double Weight
-        {
-            set
-            {              
-                _weight = value;
-            }
-            get
-            {
-                return _weight;
-            }
-        }
-        private double _weight;
     }
 }

@@ -18,7 +18,7 @@ namespace Exercicios.Domain
     {
         //Metodo para calcular 5% do peso do Cachorro que deve ser q qtd para alimentacao diaria.
         //Weight em Kg * 1000 = peso em gramas. FoodToDog em Gramas.
-        double foodToCat = (double)Weight * 1000 * 0.05;
+        double foodToCat = (double)Weight * 1000 * 0.01;
         return $"Como o gato tem {Weight}kg, ele deve comer {foodToCat}g por dia";
     }
     }   

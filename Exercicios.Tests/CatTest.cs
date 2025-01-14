@@ -42,6 +42,6 @@ public class CatTest
         var howMuchShouldCatEat = Botas.HowMuchShouldPetEat();
 
         Console.WriteLine(howMuchShouldCatEat);
-        Assert.AreEqual("Como o gato tem 3kg, ele deve comer 150g por dia", howMuchShouldCatEat);
+        Assert.AreEqual("Como o gato tem 3kg, ele deve comer 30g por dia", howMuchShouldCatEat);
     }
 }

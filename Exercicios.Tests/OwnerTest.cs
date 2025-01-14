@@ -31,7 +31,7 @@ namespace Exercicios.Tests
          Assert.AreEqual(Silvana, Botas.Owner);
 
             foreach (var pet in Silvana.Pets)
-            Console.WriteLine($"{pet.GetType().Name}: {pet.Name}");
+            Console.WriteLine($"{pet.GetAnimalType()}: {pet.Name}");
       }
 
       [TestMethod]
