@@ -35,11 +35,11 @@ namespace Exercicios.Domain
                 } 
                 else if (columns[0] == "Gato") 
                 {
-                    var cat = new Cat();             
-                    cat.Name = columns[1],
-                    cat.Gender = columns[2] == "Male" ? Gender.Male : Gender.Female,
+                    var cat = new Cat();
+                    cat.Name = columns[1];
+                    cat.Gender = columns[2] == "Male" ? Gender.Male : Gender.Female;
                     // cat.Owner = ;
-                    cat.Weight = double.Parse(columns[4]),  
+                    cat.Weight = double.Parse(columns[4]);
                     
                     pets.Add(cat);
                 }
