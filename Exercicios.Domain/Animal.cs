@@ -2,7 +2,7 @@
 
 namespace Exercicios.Tests
 {
-    public class Animal
+    public abstract class Animal
     {
         public string Name { get; set; }
         public Gender Gender { get; set; }
@@ -10,12 +10,9 @@ namespace Exercicios.Tests
         public Breed Breed { get; set; }
         public Owner Owner { get; set; }
 
-        public virtual string HowMuchShouldPetEat(int weight)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract string HowMuchShouldPetEat();
 
-        protected List<string>? CommonValidations()
+        protected List<string> CommonValidations()
         {
             var errorMessages = new List<string>();
 
@@ -33,7 +30,7 @@ namespace Exercicios.Tests
             return errorMessages;
         }
 
-        public virtual List<string>? ValidateInfosTryCatch()
+        public virtual List<string> ValidateInfosTryCatch()
         {
             var errorMessages = CommonValidations();
 
@@ -41,7 +38,18 @@ namespace Exercicios.Tests
                 return null;
 
             return errorMessages;
-            
         }
+        public double Weight
+        {
+            set
+            {              
+                _weight = value;
+            }
+            get
+            {
+                return _weight;
+            }
+        }
+        private double _weight;
     }
 }

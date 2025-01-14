@@ -6,8 +6,9 @@
         Gender Gender { get; set; }
         string Photo { get; set; }
         Owner Owner { get; set; }
+        double Weight { get; set; }
 
-        string HowMuchShouldPetEat(int weight);
+        string HowMuchShouldPetEat();
         List<string> ValidateInfosTryCatch();
     }
 }

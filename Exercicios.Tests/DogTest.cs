@@ -100,8 +100,13 @@ namespace Exercicios.Tests
         [TestMethod]
         public void HowMuchShouldDogEatTest_1()
         {
-            var Fred = new Dog();
-            var howMuchShouldDogEat = Fred.HowMuchShouldPetEat(1);
+            var Fred = new Dog()
+            {
+                Name = "Frederico",
+                Weight = 1,
+            }
+            ;
+            var howMuchShouldDogEat = Fred.HowMuchShouldPetEat();
 
             Console.WriteLine(howMuchShouldDogEat);
             Assert.AreEqual("Como o cão tem 1kg, ele deve comer 50g por dia", howMuchShouldDogEat);
@@ -110,8 +115,12 @@ namespace Exercicios.Tests
         [TestMethod]
         public void HowMuchShouldDogEatTest_2()
         {
-            var Marley = new Dog();
-            var howMuchShouldDogEat = Marley.HowMuchShouldPetEat(15);
+            var Marley = new Dog() 
+            {
+                Name = "Marley",
+                Weight = 15,
+            };
+            var howMuchShouldDogEat = Marley.HowMuchShouldPetEat();
 
             Console.WriteLine(howMuchShouldDogEat);
             Assert.AreEqual("Como o cão tem 15kg, ele deve comer 750g por dia", howMuchShouldDogEat);
@@ -120,8 +129,12 @@ namespace Exercicios.Tests
         [TestMethod]
         public void HowMuchShouldDogEatTest_3()
         {
-            var Max = new Dog();
-            var howMuchShouldDogEat = Max.HowMuchShouldPetEat(30);
+            var Max = new Dog()
+            {
+                Name = "Max",
+                Weight = 30,
+            };
+            var howMuchShouldDogEat = Max.HowMuchShouldPetEat();
 
             Console.WriteLine(howMuchShouldDogEat);
             Assert.AreEqual("Como o cão tem 30kg, ele deve comer 1500g por dia", howMuchShouldDogEat);
@@ -185,16 +198,6 @@ namespace Exercicios.Tests
         public void DogSetGetWeightShouldRejectedNegativeTest()
         {
             BanBan.Weight = -10;
-            var weight = BanBan.Weight;
-
-            Console.WriteLine(weight);
-            Assert.AreEqual(null, weight);
-        }
-        [TestMethod]
-
-        public void DogSetGetWeightNullableTest()
-        {
-            BanBan.Weight = null;
             var weight = BanBan.Weight;
 
             Console.WriteLine(weight);

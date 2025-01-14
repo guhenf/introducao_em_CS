@@ -29,4 +29,19 @@ public class CatTest
         Assert.AreEqual("Pet's name is required.", message[0]);
         Console.WriteLine(message[0]);
     }
+
+    [TestMethod]
+    public void HowMuchShouldPetEat()
+    {
+        var Botas = new Cat
+        {
+            Name = "Botas",
+            Weight = 3,
+        };
+
+        var howMuchShouldCatEat = Botas.HowMuchShouldPetEat();
+
+        Console.WriteLine(howMuchShouldCatEat);
+        Assert.AreEqual("Como o gato tem 3kg, ele deve comer 150g por dia", howMuchShouldCatEat);
+    }
 }

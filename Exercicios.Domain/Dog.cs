@@ -18,12 +18,12 @@ public class Dog : Animal, IPet
         return barks.TrimEnd();
     }
 
-    public override string HowMuchShouldPetEat(int weight)
+    public override string HowMuchShouldPetEat()
     {
         //Metodo para calcular 5% do peso do Cachorro que deve ser q qtd para alimentacao diaria.
         //Weight em Kg * 1000 = peso em gramas. FoodToDog em Gramas.
-        double foodToDog = weight * 1000 * 0.05;
-        return $"Como o cão tem {weight}kg, ele deve comer {foodToDog}g por dia";
+        double foodToDog = Weight * 1000 * 0.05;
+        return $"Como o cão tem {Weight}kg, ele deve comer {foodToDog}g por dia";
     }
 
     public string DogYearsOldCalc(DateTime dateOfBirth)
@@ -42,7 +42,7 @@ public class Dog : Animal, IPet
         }
     }
 
-    public List<string>? ValidateInfos()
+    public List<string> ValidateInfos()
     {
         var errorMessages = new List<string>();
 
@@ -61,7 +61,7 @@ public class Dog : Animal, IPet
         return errorMessages.Count == 0 ? null : errorMessages;
     }
 
-    public override List<string>? ValidateInfosTryCatch()
+    public override List<string> ValidateInfosTryCatch()
     {
         var errorMessages = CommonValidations();
 
@@ -81,25 +81,4 @@ public class Dog : Animal, IPet
 
         return errorMessages;
     }
-
-    public double? Weight
-    {
-        set
-        {
-            if (value < 0)
-            {
-                _weight = null;
-            }
-            else
-            {
-                _weight = value;
-            }
-        }
-        get
-        {
-            return _weight;
-        }
-    }
-
-    private double? _weight;
 }
