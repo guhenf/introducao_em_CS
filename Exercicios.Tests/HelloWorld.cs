@@ -1,4 +1,5 @@
 ﻿using Exercicios.Domain;
+using System.IO;
 
 namespace Exercicios.Tests
 
@@ -424,6 +425,39 @@ namespace Exercicios.Tests
             {
                 Console.WriteLine("Finally always runs here.");
             }
+        }
+
+        [TestMethod]
+        public void SystemIOCreateDirectoryTest()
+        {
+            Directory.CreateDirectory("C:\\SystemIOClass");
+            // Directory.CreateDirectory("C:\\SystemIOClass\\SubFolder");
+
+        }
+
+        [TestMethod]
+        public void SystemIOCreateFileTest()
+        {
+            File.WriteAllText("C:\\SystemIOClass\\fileTest.txt", "Teste de Criacao de Diretorio e Arquivo.txt");
+        }
+
+        [TestMethod]
+        public void SystemIOGetFileSystemEntriesTest()
+        {
+            var list = Directory.GetFileSystemEntries("C:\\SystemIOClass");
+
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        [TestMethod]
+        public void SystemIOReadTxtFileTest()
+        {
+            var content = File.ReadAllText("C:\\SystemIOClass/fileTest.txt");
+
+            Console.WriteLine(content);
         }
     } 
 }

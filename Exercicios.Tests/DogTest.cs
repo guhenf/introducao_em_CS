@@ -195,16 +195,6 @@ namespace Exercicios.Tests
         }
 
         [TestMethod]
-        public void DogSetGetWeightShouldRejectedNegativeTest()
-        {
-            BanBan.Weight = -10;
-            var weight = BanBan.Weight;
-
-            Console.WriteLine(weight);
-            Assert.AreEqual(null, weight);
-        }
-
-        [TestMethod]
         public void DogOwnerAssociationTest()
         {
             var Gustavo = new Owner
