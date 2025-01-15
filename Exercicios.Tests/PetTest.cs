@@ -15,7 +15,12 @@ public class PetTest
         Assert.AreEqual(15, pets.Count);
         foreach (var pet in pets)
         {
-            Console.WriteLine($"{pet.GetAnimalType()}: {pet.Name} {pet.Gender} Peso: {pet.Weight} Dono: {pet.Owner}");
+            if (pet.GetAnimalType() == "Dog")
+            Console.WriteLine($"{pet.GetAnimalType()}: {pet.Name} | {pet.Gender} | Breed and Size: {pet.Breed.Name}, {pet.Breed.Size} | Weight: {pet.Weight} | Pet Owner: {pet.Owner.Name}");
+            else
+            {
+                Console.WriteLine($"{pet.GetAnimalType()}: {pet.Name} | {pet.Gender} | Peso: {pet.Weight} | Dono: {pet.Owner.Name}");
+            }
         }
     }
 }

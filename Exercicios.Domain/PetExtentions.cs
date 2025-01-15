@@ -24,10 +24,9 @@ namespace Exercicios.Domain
                     var dog = new Dog();                    
                     dog.Name = columns[1];
                     dog.Gender = columns[2] == "Male" ? Gender.Male : Gender.Female;
-                    // dog.Owner = ;
-                    dog.Weight = double.Parse(columns[4]);  
-                    // dog.Breed.Name = columns[5];
-                    // dog.Breed.Size = result;
+                    dog.Owner = new Owner { Name = columns[3] };
+                    dog.Weight = double.Parse(columns[4]);
+                    dog.Breed = new Breed() { Name = columns[5], Size = Enum.Parse<Size>(columns[6])};
                     dog.DateOfBirth = Convert.ToDateTime(columns[7]);
                     dog.Vaccinated = columns[8] == "sim";
                         
@@ -38,9 +37,9 @@ namespace Exercicios.Domain
                     var cat = new Cat();
                     cat.Name = columns[1];
                     cat.Gender = columns[2] == "Male" ? Gender.Male : Gender.Female;
-                    // cat.Owner = ;
+                    cat.Owner = new Owner { Name = columns[3] };
                     cat.Weight = double.Parse(columns[4]);
-                    
+                
                     pets.Add(cat);
                 }
             }
