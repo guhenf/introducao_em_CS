@@ -1,7 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-
-namespace Exercicios.Domain
+﻿namespace Exercicios.Domain
 {
     public static class PetExtentions
     {
