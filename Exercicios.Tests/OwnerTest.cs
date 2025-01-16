@@ -121,5 +121,27 @@ namespace Exercicios.Tests
          foreach (var pet in Gustavo.Pets)
             Console.WriteLine(pet.Name);
       }
-   }
+
+        [TestMethod]
+        public void LoadOwnersLinqOrderedByNameTest()
+        {
+            var pets = new List<IPet>();
+            pets.LoadPetsFromExternalFile("C:\\SystemIOClass\\pets.csv");
+
+            var query = from pet in pets
+                        group pet by pet.Owner;
+
+            var result = query.ToList().Select((group, _) => new
+            {
+                group.Key.Name,
+                TotalDogs = group.Count(pet => pet.GetAnimalType() == "Dog"),
+                TotalCats = group.Count(pet => pet.GetAnimalType() == "Cat")
+            });
+
+            foreach (var petOwner in result)
+            {
+                Console.WriteLine($"{petOwner.Name} | Dogs: {petOwner.TotalDogs} | Cats: {petOwner.TotalCats}");
+            }
+        }
+    }
 }
