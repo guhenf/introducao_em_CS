@@ -123,10 +123,10 @@ namespace Exercicios.Tests
       }
 
         [TestMethod]
-        public void LoadOwnersLinqOrderedByNameTest()
+        public async Task LoadOwnersLinqOrderedByNameTest()
         {
             var pets = new List<IPet>();
-            pets.LoadPetsFromExternalFile("C:\\SystemIOClass\\pets.csv");
+            await pets.LoadPetsFromExternalFile("C:\\SystemIOClass\\pets.csv");
 
             var query = from pet in pets
                         group pet by pet.Owner;

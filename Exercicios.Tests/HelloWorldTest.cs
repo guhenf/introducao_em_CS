@@ -459,5 +459,47 @@ namespace Exercicios.Tests
 
             Console.WriteLine(content);
         }
+
+        [TestMethod]
+        public void AsyncAwaitTasksTest()
+        {
+            var firstReturn = HelloWorld.initTasks("One", 5);
+            Console.WriteLine(firstReturn);
+
+            var secondReturn = HelloWorld.initTasks("Two", 5);
+            Console.WriteLine(secondReturn);
+        }
+
+        [TestMethod]
+        public async Task AsyncAwaitTasksAsyncTest_1()
+        {
+            Task<string> firstReturn = HelloWorld.initTasksAsync("One", 5);
+            Task<string> secondReturn = HelloWorld.initTasksAsync("Two", 5);
+
+            string firstResult = await firstReturn;
+            string secondResult = await secondReturn;
+
+
+            Console.WriteLine(firstResult);
+            Console.WriteLine(secondReturn);
+        }
+
+        [TestMethod]
+        public async Task AsyncAwaitTasksAsyncTest_2()
+        {
+            Task<string> firstReturn = HelloWorld.initTasksAsync("One", 5);
+            Task<string> secondReturn = HelloWorld.initTasksAsync("Two", 10);
+
+            string firstResult = await firstReturn;
+            Console.WriteLine(firstResult);
+
+            Task<string> thirdReturn = HelloWorld.initTasksAsync("Three", 5);
+
+            string secondResult = await secondReturn;
+            Console.WriteLine(secondReturn);
+
+            string thirdResult = await thirdReturn;
+            Console.WriteLine(thirdResult);
+        }
     } 
 }

@@ -7,9 +7,9 @@
             return pet.GetType().Name;
         }
 
-        public static void LoadPetsFromExternalFile(this List<IPet> pets, string url)
+        public static async Task LoadPetsFromExternalFile(this List<IPet> pets, string url)
         {
-            var fileLines = File.ReadAllLines(url);
+            var fileLines = await File.ReadAllLinesAsync(url);
             var owners = new List<Owner>();
 
             for (int i = 0; i < fileLines.Length; i++)
